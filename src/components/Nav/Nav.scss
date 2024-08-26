@@ -92,6 +92,9 @@
 
   &__close,
   &__bars {
+    cursor: pointer;
+    display: none;
+
     img {
       width: 30px;
 
@@ -99,9 +102,6 @@
         width: 25px;
       }
     }
-
-    cursor: pointer;
-    display: none;
 
     @include media(800) {
       display: block;
