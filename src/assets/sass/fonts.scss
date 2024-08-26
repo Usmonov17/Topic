@@ -1,0 +1,72 @@
+$Montserrat: (
+  "Medium",
+  500),
+  ("Regular", 400
+);
+$GillSans: (
+  "Bold",
+  700
+);
+
+$Gilroy: (
+  "Bold",
+  700),
+  ("Medium",
+    500),
+  ("Regular",
+    400
+);
+
+$Helvetica: (
+  "Roman",
+  400
+);
+$Poppins: (
+  "Medium",
+  500
+);
+
+@each $name,
+$weight in $Montserrat {
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-#{$name}.ttf');
+    font-weight: $weight;
+  }
+}
+
+@each $name,
+$weight in $GillSans {
+  @font-face {
+    font-family: 'Gill Sans';
+    src: url('../fonts/GillSans/Gill Sans #{$name}.otf');
+    font-weight: $weight;
+  }
+}
+
+@each $name,
+$weight in $Gilroy {
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy/Gilroy-#{$name}.woff');
+    font-weight: $weight;
+  }
+}
+
+@each $name,
+$weight in $Helvetica {
+  @font-face {
+    font-family: 'helveticaneuecyr';
+    src: url('../fonts/Helvetica/helveticaneuecyr_roman.otf');
+    font-weight: $weight;
+  }
+}
+
+@each $name,
+$weight in $Poppins {
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-#{$name}.ttf');
+    font-weight: $weight;
+  }
+}
