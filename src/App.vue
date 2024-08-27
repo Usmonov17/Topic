@@ -1,17 +1,9 @@
 <template>
-  <div class="box">
-    <Nav />
-    <Intro />
-  </div>
+  <Header />
 </template>
 
 <script setup>
-import Nav from "./components/Nav/Nav.vue";
-import Intro from "./components/Intro/Intro.vue";
+import Header from './components/Header/Header.vue';
 </script>
 <style>
-.box {
-  display: flex;
-  flex-direction: column;
-}
 </style>
