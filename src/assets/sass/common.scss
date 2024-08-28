@@ -5,8 +5,16 @@
   font-family: "Gilroy";
 }
 
+body {
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
 .container {
-  max-width: 1350px;
+  max-width: 1230px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
