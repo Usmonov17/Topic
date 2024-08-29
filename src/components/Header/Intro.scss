@@ -5,111 +5,63 @@
 
 .intro {
   flex-grow: 1;
-  @include media(800){
+  position: relative;
+  overflow-x: hidden;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include media(650) {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  @include media(800) {
     flex-grow: 0;
     height: max-content;
   }
 
   &__bg {
     position: absolute;
-    top: -100px;
-    right: -120px;
-    overflow: hidden;
-    transform: translateX(25%);
+    top: 0;
+    right: -300px;
     z-index: -1;
-
-    @include media(1050) {
-      top: 100px;
-      right: 50px;
-    }
-
+    object-fit: cover;
+    object-position: top;
+    height: 100%;
     @include media(950) {
-      top: -10px;
-      right: -80px;
+      top: 70px;
     }
 
     @include media(800) {
-      top: -20px;
-      right: -120px;
+      top: 30px;
+      right: -400px;
+      height: 550px;
     }
 
     @include media(750) {
-      right: -130px;
+      top: 70px;
+      right: -300px;
+      height: 480px;
     }
 
-    @include media(700) {
-      right: -140px;
-    }
 
     @include media(650) {
-      top: 25%;
-      right: 15%;
-    }
-
-    @include media(550) {
-      top: 25%;
-      right: 0;
-    }
-
-    @include media(450) {
-      top: 25%;
-      right: -10%;
+      top: 0;
+      left: -20px;
+      height: 420px;
+      filter: blur(5px);
     }
 
     @include media(400) {
-      top: 30%;
-      right: -70px;
-    }
-
-    @include media(370) {
-      top: 35%;
-      right: -100px;
-    }
-
-    img {
-      object-fit: cover;
-      object-position: top;
-      height: 600px;
-
-      @include media(1200) {
-        height: 570px;
-      }
-
-      @include media(1100) {
-        height: 550px;
-      }
-
-      @include media(1000) {
-        height: 500px;
-      }
-
-      @include media(950) {
-        height: 550px;
-      }
-
-      @include media(800) {
-        height: 500px;
-      }
-
-      @include media(650) {
-        height: 420px;
-      }
-
-      @include media(400) {
-        height: 350px;
-      }
-    }
-
-
-    &::after {
-      content: '';
-      width: 100%;
-      height: 100%;
-      box-shadow: inset 0 -100px 25px -25px #fff;
-      z-index: 1;
-      position: absolute;
-      left: 0;
-      bottom: 0;
+      height: 350px;
     }
   }
 
@@ -119,10 +71,10 @@
 
   &__text {
     margin-top: 50px;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 18px;
     font-weight: 400;
-    color: #333333;
+    color: #000;
     display: flex;
     align-items: center;
     column-gap: 15px;
@@ -178,7 +130,7 @@
     span {
       display: flex;
       letter-spacing: -5px;
-      color: #ABDDB1;
+      color: #abddb1;
       font-size: 50px;
       line-height: 0;
 
@@ -197,7 +149,6 @@
       @include media(650) {
         font-size: 40px;
         letter-spacing: -10px;
-
       }
 
       @include media(600) {
@@ -217,7 +168,6 @@
       @include media(365) {
         display: none;
       }
-
     }
   }
 
@@ -317,15 +267,6 @@
 
     @include media(650) {
       flex-direction: column-reverse;
-      margin-bottom: 250px;
-    }
-
-    @include media(400) {
-      margin-bottom: 220px;
-    }
-
-    @include media(350) {
-      margin-bottom: 300px;
     }
 
     p {
@@ -336,7 +277,7 @@
       font-family: "Montserrat";
       font-size: 18px;
       font-weight: 400;
-      color: #333333;
+      color: #000;
 
       @include media(1000) {
         font-size: 16px;
@@ -368,11 +309,9 @@
         max-width: 320px;
       }
     }
-
   }
 
   &__link {
-
     width: max-content;
 
     @include media(650) {
@@ -383,7 +322,7 @@
       font-family: "Montserrat";
       font-weight: 400;
       font-size: 16px;
-      color: #333333;
+      color: #000;
       text-align: center;
       margin-top: 15px;
 

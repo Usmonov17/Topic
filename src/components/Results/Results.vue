@@ -2,27 +2,27 @@
   <div class="results">
     <div class="container">
       <h2 class="title">O’quvchilarimizning natijalari TOPIK 6 gacha</h2>
-    </div>
-    <div class="results__box">
-      <Marquee class="marque-box" speed="50">
-        <img src="../../assets/images/cefr.png" alt="" />
-        <img src="../../assets/images/cefr.png" alt="" />
-        <img src="../../assets/images/cefr.png" alt="" />
-        <img src="../../assets/images/cefr.png" alt="" />
-        <img src="../../assets/images/cefr.png" alt="" />
-        <img src="../../assets/images/cefr.png" alt="" />
-      </Marquee>
-      <Marquee class="marque-box" speed="50" direction="right">
-        <img src="../../assets/images/cefr.png" alt="" />
-        <img src="../../assets/images/cefr.png" alt="" />
-        <img src="../../assets/images/cefr.png" alt="" />
-        <img src="../../assets/images/cefr.png" alt="" />
-        <img src="../../assets/images/cefr.png" alt="" />
-        <img src="../../assets/images/cefr.png" alt="" />
-      </Marquee>
-    </div>
-    <div class="btn">
-      <Btn :text="'ARIZA QOLDIRISH'" />
+      <div class="results__box">
+        <Marquee class="marque-box" speed="50">
+          <img src="../../assets/images/cefr.png" alt="" />
+          <img src="../../assets/images/cefr.png" alt="" />
+          <img src="../../assets/images/cefr.png" alt="" />
+          <img src="../../assets/images/cefr.png" alt="" />
+          <img src="../../assets/images/cefr.png" alt="" />
+          <img src="../../assets/images/cefr.png" alt="" />
+        </Marquee>
+        <Marquee class="marque-box" speed="50" direction="right">
+          <img src="../../assets/images/cefr.png" alt="" />
+          <img src="../../assets/images/cefr.png" alt="" />
+          <img src="../../assets/images/cefr.png" alt="" />
+          <img src="../../assets/images/cefr.png" alt="" />
+          <img src="../../assets/images/cefr.png" alt="" />
+          <img src="../../assets/images/cefr.png" alt="" />
+        </Marquee>
+      </div>
+      <div class="btn">
+        <Btn :text="'ARIZA QOLDIRISH'" />
+      </div>
     </div>
   </div>
 </template>
@@ -46,6 +46,9 @@ import { Marquee } from "vue-fast-marquee";
   }
   @include media(650) {
     margin-bottom: 30px;
+    .marque-box:nth-last-child(1) {
+      display: none;
+    }
   }
   @include media(500) {
     margin-bottom: 20px;

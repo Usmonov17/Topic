@@ -28,9 +28,11 @@
         </div>
       </div>
     </nav>
-    <div class="intro">
-      <div class="container">
-        <p class="intro__text"><span>---</span>3 oyda Koreys tilida gapirishni boshlang</p>
+    <div class="container">
+      <div class="intro">
+        <p class="intro__text">
+          <span>---</span>3 oyda Koreys tilida gapirishni boshlang
+        </p>
         <h1 class="intro__title">
           Janubiy Koreya Universitetlarida 100% gacha grant asosida o’qish imkoniyati
         </h1>
@@ -49,9 +51,7 @@
           <Btn :text="'BEPUL DARSGA YOZILISH'" />
           <p class="intro__link-bottom">Birinchi darsga bepul yoziling!</p>
         </div>
-        <div class="intro__bg">
-          <img src="../../assets/images/bg.png" alt="" />
-        </div>
+        <img class="intro__bg" src="../../assets/images/bg.png" alt="" />
       </div>
     </div>
   </header>

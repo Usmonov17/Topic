@@ -34,6 +34,11 @@ const props = defineProps({
     font-size: 18px;
     box-shadow: 0 5px 0 rgba(0, 73, 49, 0.5);
   }
+  @include media(400) {
+    border-radius: -30%;
+    padding: 20px 30px;
+    font-size: 16px;
+  }
 }
 
 .btn:hover,
