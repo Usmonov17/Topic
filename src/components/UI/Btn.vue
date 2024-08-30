@@ -10,6 +10,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 @import "../../assets/sass/media.scss";
+@import "../../assets/sass/main.scss";
 .btn {
   display: block;
   background: linear-gradient(135deg, #4db6ac, #80cbc4);

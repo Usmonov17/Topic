@@ -1,0 +1,147 @@
+.courses {
+  &__box {
+    margin: 60px 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include media(900) {
+      margin-top: 50px;
+      margin-bottom: 60px;
+    }
+
+    @include media(800) {
+      margin-top: 40px;
+      margin-bottom: 50px;
+    }
+
+    @include media(700) {
+      margin: 30px 0;
+    }
+
+    @include media(400) {
+      margin-top: 20px;
+      gap: 20px;
+    }
+  }
+
+  &__card {
+    width: 380px;
+    height: 450px;
+    background: #F7F7F7;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    @include media(500) {
+      height: 400px;
+    }
+
+    @include media(400) {
+      height: 350px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 0 25px;
+    z-index: 1;
+    box-shadow: 0 -30px 10px #F7F7F7;
+    transform: translateY(-20px);
+  }
+
+  &__img {
+    height: 200px;
+    width: 100%;
+    transform: translateY(-20px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 500;
+      color: #333333;
+
+      @include media(500) {
+        font-size: 22px;
+      }
+    }
+
+    p {
+      color: #F7F7F7;
+      padding: 7px 20px;
+      background: #61ABA7;
+      font-size: 10px;
+      border-radius: 20px;
+
+      @include media(500) {
+        font-size: 8px;
+        padding: 5px 15px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 150%;
+    color: #555555;
+    max-width: 240px;
+
+    @include media(500) {
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    span {
+      color: #E5B207;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    p {
+      color: #4B9895;
+      font-size: 14px;
+
+      @include media(500) {
+        font-size: 12px;
+      }
+    }
+
+    .btn {
+      font-size: 16px;
+      font-weight: 400;
+      padding: 15px 30px;
+      box-shadow: none;
+      margin: 0;
+
+      @include media(500) {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  }
+}

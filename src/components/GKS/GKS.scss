@@ -1,0 +1,276 @@
+.gks {
+  &__box {
+    margin: 80px 0;
+    display: flex;
+    justify-content: space-between;
+
+    @include media(1000) {
+      margin: 60px 0;
+    }
+
+    @include media(900) {
+      margin: 50px 0;
+    }
+
+    @include media(700) {
+      margin: 40px 0;
+    }
+
+    @include media(500) {
+      margin: 30px 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include media(400) {
+      margin: 20px 0;
+    }
+
+    img {
+      width: 480px;
+      height: max-content;
+      margin-right: 30px;
+
+      @include media(1150) {
+        width: 40%;
+      }
+
+      @include media(500) {
+        width: 80%;
+        margin-bottom: 30px;
+      }
+
+      @include media(400) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info-text:nth-of-type(2) {
+    margin-top: 15px;
+
+    @include media(950) {
+      display: none;
+    }
+
+    @include media(500) {
+      display: block;
+    }
+  }
+
+  &__info-text {
+    h3 {
+      font-family: 'Gilroy';
+      font-weight: 500;
+      font-size: 24px;
+      margin-bottom: 15px;
+
+      @include media(1050) {
+        margin-bottom: 10px;
+        font-size: 22px;
+      }
+
+      @include media(950) {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      @include media(700) {
+        font-size: 22px;
+        line-height: 110%;
+      }
+
+      @include media(650) {
+        font-size: 18px;
+      }
+
+      @include media(500) {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      @include media(450) {
+        font-size: 22px;
+      }
+
+      @include media(400) {
+        font-size: 20px;
+      }
+
+    }
+
+    span {
+      color: #ABDDB1;
+    }
+
+    li:nth-of-type(1) {
+      @include media(500) {
+        display: none;
+      }
+    }
+
+    li:nth-of-type(2) {
+      @include media(400) {
+        display: none;
+      }
+    }
+
+    p,
+    li {
+      font-family: 'Gilroy';
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 150%;
+      list-style-type: disc;
+
+      @include media(1150) {
+        line-height: 120%;
+      }
+
+      @include media(1050) {
+        font-size: 16px;
+      }
+
+      @include media(950) {
+        font-size: 18px;
+        text-align: justify;
+      }
+
+      @include media(700) {
+        font-size: 17px;
+        text-align: justify;
+      }
+
+      @include media(650) {
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 15px;
+      }
+
+      @include media(600) {
+        -webkit-line-clamp: 5;
+      }
+
+      @include media(500) {
+        margin: 0 auto;
+        max-width: 80%;
+        font-size: 18px;
+        text-align: left;
+      }
+
+      @include media(400) {
+        font-size: 16px;
+        -webkit-line-clamp: 4;
+      }
+    }
+  }
+
+  &__video {
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+
+    @include media(1000) {
+      margin-bottom: 60px;
+    }
+
+    @include media(900) {
+      margin-bottom: 50px;
+    }
+
+    @include media(700) {
+      margin-bottom: 40px;
+      border-radius: 13px;
+
+    }
+
+    @include media(550) {
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    @include media(400) {
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      @include media(1000) {
+        height: 400px;
+      }
+
+      @include media(900) {
+        height: 380px;
+      }
+
+      @include media(800) {
+        height: 350px;
+      }
+
+      @include media(700) {
+        height: 300px;
+      }
+
+      @include media(600) {
+        height: 220px;
+      }
+
+      @include media(400) {
+        height: 180px;
+      }
+      @include media(350) {
+        height: 160px;
+      }
+    }
+    
+
+    &-desc {
+      width: 100%;
+      padding: 20px;
+      background: #333333;
+      color: #fff;
+      font-size: 28px;
+
+      @include media(1000) {
+        font-size: 26px;
+      }
+
+      @include media(900) {
+        font-size: 24px;
+      }
+
+      @include media(800) {
+        font-size: 22px;
+      }
+
+      @include media(700) {
+        font-size: 20px;
+        padding: 15px;
+      }
+
+      @include media(600) {
+        font-size: 18px;
+      }
+
+      @include media(500) {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      @include media(400) {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,243 @@
+.why {
+  &__box {
+    margin: 60px auto 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    width: max-content;
+
+    @include media(1100) {
+      gap: 40px;
+    }
+
+    @include media(1000) {
+      gap: 30px;
+    }
+
+    @include media(900) {
+      margin: 50px auto 70px;
+    }
+
+    @include media(870) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+
+    }
+
+    @include media(800) {
+      margin: 40px auto 60px;
+      gap: 40px;
+    }
+
+    @include media(700) {
+      margin: 30px auto 50px;
+      gap: 30px;
+    }
+
+    @include media(600) {
+      margin: 30px auto;
+      gap: 20px;
+    }
+
+    @include media(500) {
+      width: 100%;
+      display: flex;
+      overflow-x: scroll;
+      gap: 10px;
+      &::-webkit-scrollbar {
+        height: 2px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: #61ABA7;
+      }
+    }
+
+    @include media(400) {
+      margin: 20px 10px;
+    }
+  }
+
+  &__card {
+    width: 350px;
+    height: 240px;
+    padding: 0 20px;
+    box-shadow: 0 .5px 10px rgb(220, 239, 255);
+    border-radius: 10px;
+
+    @include media(1200) {
+      width: 300px;
+      height: 220px;
+    }
+
+    @include media(1100) {
+      width: 280px;
+      height: 200px;
+    }
+
+    @include media(1000) {
+      width: 260px;
+      height: 180px;
+    }
+
+    @include media(870) {
+      width: 300px;
+      height: 220px;
+    }
+
+    @include media(770) {
+      width: 280px;
+      height: 200px;
+    }
+
+    @include media(670) {
+      width: 260px;
+      height: 180px;
+    }
+
+    @include media(600) {
+      width: 220px;
+      height: 150px;
+    }
+
+    @include media(500) {
+      flex-shrink: 0;
+      width: 250px;
+      height: 180px;
+      margin: 10px 10px;
+    }
+  }
+
+  &__info {
+    transform: translateY(-30px);
+
+    @include media(1100) {
+      transform: translateY(-15px);
+    }
+
+    @include media(500) {
+      transform: translateY(-10px);
+    }
+  }
+
+  &__num {
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    background: #61ABA7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    @include media(1200) {
+      width: 70px;
+      height: 70px;
+      font-size: 46px;
+    }
+
+    @include media(1100) {
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    @include media(1000) {
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+    }
+
+    @include media(700) {
+      margin-bottom: 10px;
+    }
+
+    @include media(500) {
+      margin-bottom: 15px;
+    }
+
+  }
+
+  &__title {
+    font-size: 25px;
+    margin-bottom: 30px;
+    color: #000000;
+    font-weight: 400;
+
+    @include media(1200) {
+      font-size: 23px;
+      margin-bottom: 20px;
+    }
+
+    @include media(1100) {
+      font-size: 20px;
+    }
+
+    @include media(1000) {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    @include media(800) {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    @include media(700) {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    @include media(600) {
+      font-size: 14px;
+    }
+
+    @include media(500) {
+      margin-bottom: 5px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  &__text {
+    font-size: 17px;
+    font-weight: 400;
+
+    @include media(1200) {
+      font-size: 16px;
+    }
+
+    @include media(1100) {
+      font-size: 15px;
+    }
+
+    @include media(1000) {
+      font-size: 14px;
+    }
+
+    @include media(800) {
+      font-size: 13px;
+    }
+
+    @include media(700) {
+      font-size: 12px;
+    }
+
+    @include media(600) {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
+    }
+
+    @include media(500) {
+      font-size: 13px;
+      max-width: 100%;
+      -webkit-line-clamp: 5;    }
+  }
+}
