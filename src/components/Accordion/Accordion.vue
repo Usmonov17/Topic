@@ -64,9 +64,6 @@ const toggleFaq = (index) => {
     flex-direction: column;
     gap: 5px;
   }
-  &__card {
-    border: 1px solid black;
-  }
   &__question {
     display: flex;
     justify-content: space-between;
@@ -74,7 +71,6 @@ const toggleFaq = (index) => {
     cursor: pointer;
     padding: 15px;
     background: #d7f8db;
-    border: 1px solid red;
     border-radius: 10px;
     position: relative;
     h3 {
