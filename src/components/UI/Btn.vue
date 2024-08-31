@@ -1,5 +1,5 @@
 <template>
-  <button class="btn">{{ props.text }}</button>
+  <button type="submit" class="btn">{{ props.text }}</button>
 </template>
 
 <script setup>
