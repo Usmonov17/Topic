@@ -9,10 +9,12 @@
   <Accordion />
   <Contact />
   <Footer />
-  <Modal />
+  <Modal v-model:modal="modal" />
 </template>
 
 <script setup>
+import { provide, ref } from "vue";
+
 import Header from "./components/Header/Header.vue";
 import Ads from "./components/Ads/Ads.vue";
 import Results from "./components/Results/Results.vue";
@@ -24,5 +26,8 @@ import Accordion from "./components/Accordion/Accordion.vue";
 import Contact from "./components/ConatctForm/Contact.vue";
 import Footer from "./components/Footer/Footer.vue";
 import Modal from "./components/Modal/Modal.vue";
+
+const modal = ref(false);
+provide('modal', modal);
+provide('newModal', (value) => { modal.value = value });
 </script>
-<style></style>

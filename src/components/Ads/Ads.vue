@@ -55,13 +55,19 @@
           </p>
         </div>
       </div>
-      <div class="ads__btn">
-        <Btn :text="'HA BU MEN'" />
+      <div class="ads__btn" >
+        <Btn :text="'HA BU MEN'" @click="openModal" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { inject } from "vue";
 import Btn from "../UI/Btn.vue";
+const newModal = inject('newModal')
+
+const openModal = () => {
+  newModal(true)
+}
 </script>

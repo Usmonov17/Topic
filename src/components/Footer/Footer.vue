@@ -2,20 +2,21 @@
   <div class="footer">
     <div class="container">
       <div class="footer__box">
-        <a href="" class="footer__logo">
+        <a href="#/" class="footer__logo">
           <img src="../../assets/images/footer-logo.png" alt="" />
         </a>
         <ul class="footer__list">
-          <li><a href="" class="footer__link">Nega biz</a></li>
-          <li><a href="" class="footer__link">Natijalar</a></li>
-          <li><a href="" class="footer__link">Kurslar</a></li>
-          <li><a href="" class="footer__link">Savollar</a></li>
+          <li><a href="#whyTopic" class="footer__link">Nega biz</a></li>
+          <li><a href="#results" class="footer__link">Natijalar</a></li>
+          <li><a href="#courses" class="footer__link">Kurslar</a></li>
+          <li><a href="#questions" class="footer__link">Savollar</a></li>
         </ul>
         <div class="footer__media">
-          <a href=""><img src="../../assets/images/phone.png" alt="" /></a>
-          <a href=""><img src="../../assets/images/insta.png" alt="" /></a>
-          <a href=""><img src="../../assets/images/tg.png" alt="" /></a>
-          <a href=""><img src="../../assets/images/youtube.png" alt="" /></a>
+          <a href="tel:+998338561712"><img src="../../assets/images/phone.png" alt="" /></a>
+          <a href="https://www.instagram.com/accounts/login/"><img src="../../assets/images/insta.png" alt="" /></a>
+          <a href="https://www.telegram.me/@Developer_M4"><img src="../../assets/images/tg.png" alt="" /></a>
+          <a href="https://www.youtube.com/@it-time-academy/videos"><img src="../../assets/images/youtube.png"
+              alt="" /></a>
         </div>
       </div>
       <p class="footer__commit">Made by <span>SOLIWEB</span></p>

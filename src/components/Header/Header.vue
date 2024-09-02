@@ -3,7 +3,7 @@
     <nav class="nav">
       <div class="container">
         <div class="nav__box">
-          <a href="#" class="nav__logo">
+          <a href="#/" class="nav__logo">
             <img src="../../assets/images/logo.png" alt="" />
             <p class="nav__logo-text">
               Toshkentda joylashgan Koreys tili hamda Topik o’quv markazi
@@ -16,10 +16,10 @@
             <button class="nav__close" @click="burger = false">
               <img src="../../assets/images/close.png" alt="" />
             </button>
-            <li><a href="" class="nav__link">Nega biz</a></li>
-            <li><a href="" class="nav__link">Natijalar</a></li>
-            <li><a href="" class="nav__link">Kurslar</a></li>
-            <li><a href="" class="nav__link">Ko’p beriladigan savollar</a></li>
+            <li><a href="#whyTopic" class="nav__link">Nega biz</a></li>
+            <li><a href="#results" class="nav__link">Natijalar</a></li>
+            <li><a href="#courses" class="nav__link">Kurslar</a></li>
+            <li><a href="#questions" class="nav__link">Ko’p beriladigan savollar</a></li>
           </ul>
           <a href="tel:+998333060098" class="nav__contact">
             +998 (33) 306 0098
@@ -29,7 +29,7 @@
       </div>
     </nav>
     <div class="container">
-      <div class="intro">
+      <div class="intro" id="/">
         <p class="intro__text">
           <span>---</span>3 oyda Koreys tilida gapirishni boshlang
         </p>
@@ -47,10 +47,10 @@
             imkoniyati
           </p>
         </div>
-        <div class="intro__link">
-          <Btn :text="'BEPUL DARSGA YOZILISH'" />
+        <a href="#courses" class="intro__link">
+          <Btn :text="'BEPUL DARSGA YOZILISH'" class="btn" />
           <p class="intro__link-bottom">Birinchi darsga bepul yoziling!</p>
-        </div>
+        </a>
         <img class="intro__bg" src="../../assets/images/bg.png" alt="" />
       </div>
     </div>

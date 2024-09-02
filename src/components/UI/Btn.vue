@@ -1,12 +1,19 @@
 <template>
-  <button type="submit" class="btn">{{ props.text }}</button>
+  <button type="button" class="btn" @click="openModal">{{ text }}</button>
 </template>
 
 <script setup>
 const props = defineProps({
   text: String,
+  modal: Boolean
 });
+const emit = defineEmits(['update:modal']);
+
+const openModal = () => {
+  emit('update:modal', true);
+};
 </script>
+
 
 <style lang="scss" scoped>
 @import "../../assets/sass/media.scss";

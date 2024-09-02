@@ -1,5 +1,5 @@
 <template>
-  <div class="why">
+  <div class="why" id="whyTopic">
     <div class="container">
       <h2 class="title">Nima uchun aynan TOPIK academy?</h2>
       <div class="why__box">

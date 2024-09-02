@@ -1,5 +1,5 @@
 <template>
-  <div class="courses">
+  <div class="courses" id="courses">
     <div class="container">
       <h2 class="title">O’zingizga mos kursga ro’yxatdan o’ting</h2>
       <div class="courses__box">
@@ -17,7 +17,7 @@
               6 kun 1.5 soatdan intensive kurs.
             </p>
             <div class="courses__price">
-              <Btn :text="'Royxatdan otish'" class="btn" />
+              <Btn :text="'Royxatdan otish'" class="btn" @click="openModal" />
               <p>970.000 so’m /oy</p>
             </div>
           </div>
@@ -35,7 +35,7 @@
               Haftada 3 kun 1.5 soatdan iborat odatiy Koreys tili darslari.
             </p>
             <div class="courses__price">
-              <Btn :text="'Royxatdan otish'" class="btn" />
+              <Btn :text="'Royxatdan otish'" class="btn" @click="openModal" />
               <p>560.000 so’m /oy</p>
             </div>
           </div>
@@ -54,7 +54,7 @@
               3 kun 1.5 soatdan darslar. Moslashuvchan grafik va individual yondashuv.
             </p>
             <div class="courses__price">
-              <Btn :text="'Royxatdan otish'" class="btn" />
+              <Btn :text="'Royxatdan otish'" class="btn" @click="openModal" />
               <p>1.800.000 so’m /oy</p>
             </div>
           </div>
@@ -65,5 +65,12 @@
 </template>
 
 <script setup>
+import { inject } from "vue";
 import Btn from "../UI/Btn.vue";
+
+const newModal = inject('newModal')
+
+const openModal = () => {
+  newModal(true)
+}
 </script>

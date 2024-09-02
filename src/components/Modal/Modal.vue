@@ -1,38 +1,86 @@
 <template>
-  <div class="conatiner">
-    <div class="modal" v-if="showModal">
-      <div class="modal__bg" @click="closeModal"></div>
-      <div class="modal__content">
-        <p class="modal__close" @click="closeModal">×</p>
-        <h2 class="modal__title">O'z ma'lumotlaringizni qoldiring</h2>
-        <p class="modal__text">Sizga to'liqroq ma'lumot berish uchun mutaxassislarimiz siz bilan bog'lanishadi</p>
-        <form @submit.prevent="submitForm">
-          <input type="text" v-model="name" placeholder="Ismingiz" required />
-          <input type="tel" v-model="phone" placeholder="+998 99-999-9999" required />
-          <button class="modal__submit" type="submit">Bepul darsga yozilish</button>
-        </form>
+  <div class="container">
+    <Transition name="modal">
+      <div class="modal" v-if="modal">
+        <div class="modal__bg" @click="closeModal"></div>
+        <div class="modal__content">
+          <p class="modal__close" @click="closeModal">×</p>
+          <h2 class="modal__title">O'z ma'lumotlaringizni qoldiring</h2>
+          <p class="modal__text">Sizga to'liqroq ma'lumot berish uchun mutaxassislarimiz siz bilan bog'lanishadi</p>
+          <form @submit.prevent="submitForm">
+            <input type="text" v-model="formData.name" placeholder="Ismingiz" required id="name" />
+            <input type="tel" v-model="formData.phone" placeholder="+998 99-999-9999" required id="phone" />
+            <button class="modal__submit" type="submit" :disabled="loading">
+              {{ loading ? 'Yuborilmoqda' : 'Bepul darsga yozilish' }}
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    </Transition>
   </div>
 </template>
+
 <script setup>
 import { ref } from 'vue';
+import axios from 'axios';
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 
-const showModal = ref(true);
-const name = ref('');
-const phone = ref('');
+const props = defineProps({
+  modal: Boolean
+});
+const emit = defineEmits(['update:modal']);
+
+const formData = ref({
+  name: '',
+  phone: ''
+})
 
 const closeModal = () => {
-  showModal.value = false;
+  emit('update:modal', false);
 };
 
-const submitForm = () => {
-  if (name.value && phone.value) {
-    alert('Form submitted successfully!');
+const loading = ref(false)
+
+const submitForm = async () => {
+  if (loading.value) return;
+  loading.value = true;
+  const token = '7355179055:AAEUm5_onfttMaMoejdjT3BI1zN7gDgsvNE';
+  const chat_id = '-1002190363312';
+  const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+  try {
+    await axios.post(url, {
+      chat_id: chat_id,
+      text: `Ism: ${formData.value.name}\nXabar: ${formData.value.phone}`
+    });
+    toast("Yuborildi", {
+      "theme": "auto",
+      "type": "success",
+      "position": "bottom-right",
+      "autoClose": 2000,
+      "transition": "slide",
+      "dangerouslyHTMLString": true
+    })
     closeModal();
+    formData.value.name = '';
+    formData.value.phone = '';
+    loading.value = false;
+  } catch (error) {
+    console.error('Xatolik:', error);
+    toast("Yuborishda XATO!", {
+      "theme": "auto",
+      "type": "error",
+      "position": "top-left",
+      "autoClose": 2000,
+      "transition": "slide",
+      "dangerouslyHTMLString": true
+    })
+    loading.value = false;
   }
-}
+};
 </script>
+
 <style lang="scss" scoped>
 @import '../../assets/sass/media.scss';
 
@@ -150,6 +198,8 @@ const submitForm = () => {
     @include media(400) {
       padding: 10px 0;
       font-size: 12px;
+      width: 100%;
+      margin-top: 2px;
     }
   }
 
@@ -242,7 +292,16 @@ const submitForm = () => {
     @include media(400) {
       font-size: 12px;
     }
-
   }
+}
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: .5s;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
 }
 </style>

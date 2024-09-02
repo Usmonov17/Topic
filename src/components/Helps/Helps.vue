@@ -13,7 +13,7 @@
           </p>
           <div class="helps__link">
             <p>Ko’proq ma’lumot olish uchun bepul konsultatsiyaga yoziling!</p>
-            <Btn :text="'Ariza qoldirish'" />
+            <Btn :text="'Ariza qoldirish'" @click="openModal" />
           </div>
         </div>
         <div class="helps__res">
@@ -34,4 +34,10 @@
 <script setup>
 import { Marquee } from "vue-fast-marquee";
 import Btn from "../UI/Btn.vue";
+import { inject } from "vue";
+const newModal = inject('newModal')
+
+const openModal = () => {
+  newModal(true)
+}
 </script>
