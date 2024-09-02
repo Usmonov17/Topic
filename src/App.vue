@@ -9,6 +9,7 @@
   <Accordion />
   <Contact />
   <Footer />
+  <Modal />
 </template>
 
 <script setup>
@@ -22,5 +23,6 @@ import WhyTopic from "./components/WhyTopic/WhyTopic.vue";
 import Accordion from "./components/Accordion/Accordion.vue";
 import Contact from "./components/ConatctForm/Contact.vue";
 import Footer from "./components/Footer/Footer.vue";
+import Modal from "./components/Modal/Modal.vue";
 </script>
 <style></style>

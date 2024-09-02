@@ -9,7 +9,7 @@
           <li><a href="" class="footer__link">Nega biz</a></li>
           <li><a href="" class="footer__link">Natijalar</a></li>
           <li><a href="" class="footer__link">Kurslar</a></li>
-          <li><a href="" class="footer__link">Ko'p beriladigan savollar</a></li>
+          <li><a href="" class="footer__link">Savollar</a></li>
         </ul>
         <div class="footer__media">
           <a href=""><img src="../../assets/images/phone.png" alt="" /></a>
@@ -66,6 +66,10 @@
   }
 
   &__logo {
+    @include media(380) {
+      display: none;
+    }
+
     img {
       @include media(850) {
         width: 80px;
@@ -78,6 +82,7 @@
       @include media(700) {
         width: 60px;
       }
+
     }
   }
 
@@ -85,6 +90,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include media(380) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
   }
 
   &__list {
@@ -103,6 +115,10 @@
     @include media(700) {
       flex-direction: column;
       gap: 8px;
+    }
+
+    @include media(500) {
+      gap: 5px;
     }
   }
 
