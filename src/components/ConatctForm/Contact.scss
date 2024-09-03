@@ -2,24 +2,31 @@
   background: linear-gradient(to right, #b4faf8, #c2fdeb, #f6fff7);
   padding: 54px 150px;
   border-radius: 15px;
+  margin: 80px 0;
 
   @include media(1000) {
+    margin: 70px 0;
     padding: 40px 120px;
   }
 
   @include media(900) {
+    margin: 50px 0;
     padding: 40px 100px;
   }
 
   @include media(800) {
+    margin: 40px 0;
     padding: 30px 90px;
   }
 
   @include media(700) {
+    margin: 30px 0;
+    margin: 80px 0;
     padding: 25px 80px;
   }
 
   @include media(600) {
+    margin: 25px 0;
     padding: 20px 50px;
   }
 
@@ -29,10 +36,12 @@
   }
 
   @include media(450) {
+    margin: 20px 0;
     padding: 15px;
   }
 
   @include media(380) {
+    margin: 15px 0;
     padding: 10px;
   }
 
@@ -241,6 +250,7 @@
       @include media(700) {
         padding: 10px 0;
       }
+
       @include media(450) {
         padding: 8px 0;
         font-size: 14px;

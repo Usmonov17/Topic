@@ -57,7 +57,7 @@ const openModal = () => {
 .btn:focus {
   animation: pulse 1s;
   box-shadow: 0 0 0 30px transparent;
-
+  color: #fff;
   @include media(900) {
     box-shadow: 0 0 0 20px transparent;
   }

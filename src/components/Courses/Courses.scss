@@ -41,7 +41,7 @@
     }
 
     @include media(400) {
-      height: 350px;
+      height: 380px;
     }
   }
 
@@ -109,6 +109,11 @@
     @include media(500) {
       font-size: 14px;
       line-height: 140%;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 10px;
     }
 
     span {

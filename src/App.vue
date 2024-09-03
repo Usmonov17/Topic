@@ -6,7 +6,6 @@
   <Helps />
   <Courses />
   <WhyTopic />
-  <Accordion />
   <Contact />
   <Footer />
   <Modal v-model:modal="modal" />
@@ -22,7 +21,6 @@ import GKS from "./components/GKS/GKS.vue";
 import Helps from "./components/Helps/Helps.vue";
 import Courses from "./components/Courses/Courses.vue";
 import WhyTopic from "./components/WhyTopic/WhyTopic.vue";
-import Accordion from "./components/Accordion/Accordion.vue";
 import Contact from "./components/ConatctForm/Contact.vue";
 import Footer from "./components/Footer/Footer.vue";
 import Modal from "./components/Modal/Modal.vue";
