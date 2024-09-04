@@ -25,9 +25,6 @@
             </li>
           </ul>
           <div class="nav__right">
-            <button class="nav__bars" @click="burger = true">
-              <img src="../../assets/images/burger.svg" alt="" />
-            </button>
             <a href="tel:+998333060098" class="nav__contact">
               +998 (33) 306 0098
               <span>{{ t("nav.contactNow") }}</span>
@@ -54,6 +51,9 @@
                 <img src="../../assets/images/eng.png" alt="" />
               </button>
             </Transition>
+            <button class="nav__bars" @click="burger = true">
+              <img src="../../assets/images/burger.svg" alt="" />
+            </button>
           </div>
         </div>
       </div>
@@ -92,5 +92,6 @@ const { locale, t } = useI18n();
 
 const changeLang = (newLang) => {
   locale.value = newLang;
+  localStorage.setItem("locale", newLang);
 };
 </script>

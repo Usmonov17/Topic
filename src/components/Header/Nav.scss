@@ -9,7 +9,7 @@
   &__right {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
   }
 
   &__lang {
@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     line-height: 110%;
 
     @include media(650) {
