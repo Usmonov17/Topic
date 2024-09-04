@@ -1,7 +1,7 @@
 <template>
   <div class="helps">
     <div class="container">
-      <h2 class="helps__title">{{ $t("helps.title") }}</h2>
+      <h2 class="title">{{ $t("helps.title") }}</h2>
       <div class="helps__box">
         <div class="helps__info">
           <p class="helps__info-text">{{ $t("helps.infoText") }}</p>
