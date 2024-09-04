@@ -5,51 +5,76 @@
         <div class="nav__box">
           <a href="#/" class="nav__logo">
             <img src="../../assets/images/logo.png" alt="" />
-            <p class="nav__logo-text">
-              Toshkentda joylashgan Koreys tili hamda Topik o’quv markazi
-            </p>
+            <p class="nav__logo-text">{{ t("nav.logoText") }}</p>
           </a>
-          <button class="nav__bars" @click="burger = true">
-            <img src="../../assets/images/burger.svg" alt="" />
-          </button>
           <ul class="nav__list" :class="{ active: burger }">
             <button class="nav__close" @click="burger = false">
               <img src="../../assets/images/close.png" alt="" />
             </button>
-            <li><a href="#whyTopic" class="nav__link">Nega biz</a></li>
-            <li><a href="#results" class="nav__link">Natijalar</a></li>
-            <li><a href="#courses" class="nav__link">Kurslar</a></li>
-            <li><a href="#questions" class="nav__link">Ko’p beriladigan savollar</a></li>
+            <li>
+              <a href="#whyTopic" class="nav__link">{{ t("nav.whyUs") }}</a>
+            </li>
+            <li>
+              <a href="#results" class="nav__link">{{ t("nav.results") }}</a>
+            </li>
+            <li>
+              <a href="#courses" class="nav__link">{{ t("nav.courses") }}</a>
+            </li>
+            <li>
+              <a href="#questions" class="nav__link">{{ t("nav.faq") }}</a>
+            </li>
           </ul>
-          <a href="tel:+998333060098" class="nav__contact">
-            +998 (33) 306 0098
-            <span>Hoziroq bog’laning</span>
-          </a>
+          <div class="nav__right">
+            <button class="nav__bars" @click="burger = true">
+              <img src="../../assets/images/burger.svg" alt="" />
+            </button>
+            <a href="tel:+998333060098" class="nav__contact">
+              +998 (33) 306 0098
+              <span>{{ t("nav.contactNow") }}</span>
+            </a>
+            <Transition name="lang" mode="out-in">
+              <button
+                class="nav__lang"
+                v-if="locale == 'ru'"
+                @click="changeLang('uz')"
+              >
+                Uz
+                <img src="../../assets/images/Uzbekistan-flag.webp" alt="" />
+              </button>
+              <button
+                class="nav__lang"
+                v-else-if="locale == 'eng'"
+                @click="changeLang('ru')"
+              >
+                Ru
+                <img src="../../assets/images/russia.png" alt="" />
+              </button>
+              <button class="nav__lang" v-else @click="changeLang('eng')">
+                Eng
+                <img src="../../assets/images/eng.png" alt="" />
+              </button>
+            </Transition>
+          </div>
         </div>
       </div>
     </nav>
-    <div class="container">
-      <div class="intro" id="/">
-        <p class="intro__text">
-          <span>---</span>3 oyda Koreys tilida gapirishni boshlang
-        </p>
-        <h1 class="intro__title">
-          Janubiy Koreya Universitetlarida 100% gacha grant asosida o’qish imkoniyati
-        </h1>
+    <div class="intro" id="/">
+      <div class="container">
+        <p class="intro__text"><span>---</span>{{ t("intro.text") }}</p>
+        <h1 class="intro__title">{{ t("intro.title") }}</h1>
         <div class="intro__desc">
           <p class="intro__desc-text">
             <img src="../../assets/images/leaf.png" alt="" />
-            5 oyda Topikdan 6 darajagacha olishda yordam beramiz
+            {{ t("intro.desc1") }}
           </p>
           <p class="intro__desc-text">
             <img src="../../assets/images/leaf.png" alt="" />
-            Topikdan yuqori darajani qo’lga kiritib, Janubiy Koreyada o’qish va ishlash
-            imkoniyati
+            {{ t("intro.desc2") }}
           </p>
         </div>
         <a href="#courses" class="intro__link">
-          <Btn :text="'BEPUL DARSGA YOZILISH'" class="btn" />
-          <p class="intro__link-bottom">Birinchi darsga bepul yoziling!</p>
+          <Btn :text="t('intro.btnText')" class="btn" />
+          <p class="intro__link-bottom">{{ t("intro.linkBottom") }}</p>
         </a>
         <img class="intro__bg" src="../../assets/images/bg.png" alt="" />
       </div>
@@ -60,5 +85,12 @@
 <script setup>
 import Btn from "../UI/Btn.vue";
 import { ref } from "vue";
+import { useI18n } from "vue-i18n";
+
 let burger = ref(false);
+const { locale, t } = useI18n();
+
+const changeLang = (newLang) => {
+  locale.value = newLang;
+};
 </script>

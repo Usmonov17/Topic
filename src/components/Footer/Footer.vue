@@ -6,20 +6,35 @@
           <img src="../../assets/images/footer-logo.png" alt="" />
         </a>
         <ul class="footer__list">
-          <li><a href="#whyTopic" class="footer__link">Nega biz</a></li>
-          <li><a href="#results" class="footer__link">Natijalar</a></li>
-          <li><a href="#courses" class="footer__link">Kurslar</a></li>
-          <li><a href="#questions" class="footer__link">Savollar</a></li>
+          <li>
+            <a href="#whyTopic" class="footer__link">{{ $t("footer.whyTopic") }}</a>
+          </li>
+          <li>
+            <a href="#results" class="footer__link">{{ $t("footer.results") }}</a>
+          </li>
+          <li>
+            <a href="#courses" class="footer__link">{{ $t("footer.courses") }}</a>
+          </li>
+          <li>
+            <a href="#questions" class="footer__link">{{ $t("footer.questions") }}</a>
+          </li>
         </ul>
         <div class="footer__media">
-          <a href="tel:+998338561712"><img src="../../assets/images/phone.png" alt="" /></a>
-          <a href="https://www.instagram.com/accounts/login/"><img src="../../assets/images/insta.png" alt="" /></a>
-          <a href="https://www.telegram.me/@Developer_M4"><img src="../../assets/images/tg.png" alt="" /></a>
-          <a href="https://www.youtube.com/@it-time-academy/videos"><img src="../../assets/images/youtube.png"
-              alt="" /></a>
+          <a href="tel:+998338561712"
+            ><img src="../../assets/images/phone.png" alt=""
+          /></a>
+          <a href="https://www.instagram.com/accounts/login/"
+            ><img src="../../assets/images/insta.png" alt=""
+          /></a>
+          <a href="https://www.telegram.me/@Developer_M4"
+            ><img src="../../assets/images/tg.png" alt=""
+          /></a>
+          <a href="https://www.youtube.com/@it-time-academy/videos"
+            ><img src="../../assets/images/youtube.png" alt=""
+          /></a>
         </div>
       </div>
-      <p class="footer__commit">Made by <span>SOLIWEB</span></p>
+      <p class="footer__commit">{{ $t("footer.commit") }}</p>
     </div>
   </div>
 </template>
@@ -83,7 +98,6 @@
       @include media(700) {
         width: 60px;
       }
-
     }
   }
 

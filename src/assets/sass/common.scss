@@ -1,3 +1,5 @@
+@import './media.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +17,10 @@ body::-webkit-scrollbar {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+
+  @include media(500) {
+    padding: 0 10px;
+  }
 }
 
 a {

@@ -1,7 +1,7 @@
 <template>
   <div class="courses" id="courses">
     <div class="container">
-      <h2 class="title">O’zingizga mos kursga ro’yxatdan o’ting</h2>
+      <h2 class="title">{{ $t("courses.title") }}</h2>
       <div class="courses__box">
         <div class="courses__card">
           <div class="courses__img">
@@ -9,16 +9,17 @@
           </div>
           <div class="courses__info">
             <div class="courses__title">
-              <h3>Intiensive</h3>
-              <p>Davomiyligi: 5 oy</p>
+              <h3>{{ $t("courses.intensive.title") }}</h3>
+              <p>{{ $t("courses.intensive.duration") }}</p>
             </div>
-            <p class="courses__text">
-              <span>Koreys tilini</span> chuqur o’zlashtirmoqchi bo’lganlar uchun haftada
-              6 kun 1.5 soatdan intensive kurs.
-            </p>
+            <p>{{ $t("courses.intensive.text") }}</p>
             <div class="courses__price">
-              <Btn :text="'Royxatdan otish'" class="btn" @click="openModal" />
-              <p>970.000 so’m /oy</p>
+              <Btn
+                :text="$t('courses.intensive.register')"
+                class="btn"
+                @click="openModal"
+              />
+              <p>970.000</p>
             </div>
           </div>
         </div>
@@ -28,15 +29,17 @@
           </div>
           <div class="courses__info">
             <div class="courses__title">
-              <h3>Odatiy</h3>
-              <p>Davomiyligi: 5 oy</p>
+              <h3>{{ $t("courses.regular.title") }}</h3>
+              <p>{{ $t("courses.regular.duration") }}</p>
             </div>
-            <p class="courses__text">
-              Haftada 3 kun 1.5 soatdan iborat odatiy Koreys tili darslari.
-            </p>
+            <p>{{ $t("courses.regular.text") }}</p>
             <div class="courses__price">
-              <Btn :text="'Royxatdan otish'" class="btn" @click="openModal" />
-              <p>560.000 so’m /oy</p>
+              <Btn
+                :text="$t('courses.regular.register')"
+                class="btn"
+                @click="openModal"
+              />
+              <p>560.000</p>
             </div>
           </div>
         </div>
@@ -46,16 +49,17 @@
           </div>
           <div class="courses__info">
             <div class="courses__title">
-              <h3>Individual</h3>
-              <p>Davomiyligi: 5 oy</p>
+              <h3>{{ $t("courses.individual.title") }}</h3>
+              <p>{{ $t("courses.individual.duration") }}</p>
             </div>
-            <p class="courses__text">
-              O’qituvchidan <span>individual</span> dars olmoqchi bo’lganlar uchun haftada
-              3 kun 1.5 soatdan darslar. Moslashuvchan grafik va individual yondashuv.
-            </p>
+            <p>{{ $t("courses.individual.text") }}</p>
             <div class="courses__price">
-              <Btn :text="'Royxatdan otish'" class="btn" @click="openModal" />
-              <p>1.800.000 so’m /oy</p>
+              <Btn
+                :text="$t('courses.individual.register')"
+                class="btn"
+                @click="openModal"
+              />
+              <p>1.800.000</p>
             </div>
           </div>
         </div>
@@ -68,9 +72,8 @@
 import { inject } from "vue";
 import Btn from "../UI/Btn.vue";
 
-const newModal = inject('newModal')
-
+const newModal = inject("newModal");
 const openModal = () => {
-  newModal(true)
-}
+  newModal(true);
+};
 </script>

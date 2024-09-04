@@ -5,13 +5,25 @@
         <div class="modal__bg" @click="closeModal"></div>
         <div class="modal__content">
           <p class="modal__close" @click="closeModal">×</p>
-          <h2 class="modal__title">O'z ma'lumotlaringizni qoldiring</h2>
-          <p class="modal__text">Sizga to'liqroq ma'lumot berish uchun mutaxassislarimiz siz bilan bog'lanishadi</p>
+          <h2 class="modal__title">{{ $t("modal.title") }}</h2>
+          <p class="modal__text">{{ $t("modal.text") }}</p>
           <form @submit.prevent="submitForm">
-            <input type="text" v-model="formData.name" placeholder="Ismingiz" required id="name" />
-            <input type="tel" v-model="formData.phone" placeholder="+998 99-999-9999" required id="phone" />
+            <input
+              type="text"
+              v-model="formData.name"
+              :placeholder="$t('modal.name')"
+              required
+              id="name"
+            />
+            <input
+              type="tel"
+              v-model="formData.phone"
+              placeholder="+998 99-999-9999"
+              required
+              id="phone"
+            />
             <button class="modal__submit" type="submit" :disabled="loading">
-              {{ loading ? 'Yuborilmoqda' : 'Bepul darsga yozilish' }}
+              {{ $t(loading ? "modal.loading" : "modal.submit") }}
             </button>
           </form>
         </div>
@@ -21,68 +33,70 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import axios from 'axios';
+import { ref } from "vue";
+import axios from "axios";
 import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
 
 const props = defineProps({
-  modal: Boolean
+  modal: Boolean,
 });
-const emit = defineEmits(['update:modal']);
+const emit = defineEmits(["update:modal"]);
 
 const formData = ref({
-  name: '',
-  phone: ''
-})
+  name: "",
+  phone: "",
+});
 
 const closeModal = () => {
-  emit('update:modal', false);
+  emit("update:modal", false);
 };
 
-const loading = ref(false)
+const loading = ref(false);
 
 const submitForm = async () => {
   if (loading.value) return;
   loading.value = true;
-  const token = '7355179055:AAEUm5_onfttMaMoejdjT3BI1zN7gDgsvNE';
-  const chat_id = '-1002190363312';
+  const token = "7355179055:AAEUm5_onfttMaMoejdjT3BI1zN7gDgsvNE";
+  const chat_id = "-1002190363312";
   const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
   try {
     await axios.post(url, {
       chat_id: chat_id,
-      text: `Ism: ${formData.value.name}\nXabar: ${formData.value.phone}`
+      text: `Ism: ${formData.value.name}\nXabar: ${formData.value.phone}`,
     });
     toast("Yuborildi", {
-      "theme": "auto",
-      "type": "success",
-      "position": "bottom-right",
-      "autoClose": 2000,
-      "transition": "slide",
-      "dangerouslyHTMLString": true
-    })
+      theme: "auto",
+      type: "success",
+      position: "bottom-right",
+      autoClose: 2000,
+      transition: "slide",
+      dangerouslyHTMLString: true,
+    });
     closeModal();
-    formData.value.name = '';
-    formData.value.phone = '';
+    formData.value.name = "";
+    formData.value.phone = "";
     loading.value = false;
   } catch (error) {
-    console.error('Xatolik:', error);
+    console.error("Xatolik:", error);
     toast("Yuborishda XATO!", {
-      "theme": "auto",
-      "type": "error",
-      "position": "top-left",
-      "autoClose": 2000,
-      "transition": "slide",
-      "dangerouslyHTMLString": true
-    })
+      theme: "auto",
+      type: "error",
+      position: "top-left",
+      autoClose: 2000,
+      transition: "slide",
+      dangerouslyHTMLString: true,
+    });
+    formData.value.name = "";
+    formData.value.phone = "";
     loading.value = false;
   }
 };
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/sass/media.scss';
+@import "../../assets/sass/media.scss";
 
 .modal {
   position: fixed;
@@ -241,7 +255,7 @@ const submitForm = async () => {
 
   &__title {
     font-size: 36px;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-weight: 500;
     margin-bottom: 20px;
 
@@ -297,7 +311,7 @@ const submitForm = async () => {
 
 .modal-enter-active,
 .modal-leave-active {
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .modal-enter-from,

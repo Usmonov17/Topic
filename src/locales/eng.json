@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "logoText": "Korean Language and TOPIK Center in Tashkent",
+    "whyUs": "Why Us",
+    "results": "Results",
+    "courses": "Courses",
+    "faq": "Questions",
+    "contactNow": "Contact us now"
+  },
+  "intro": {
+    "text": "Start speaking Korean in 3 months",
+    "title": "Opportunity to study at South Korean universities with up to 100% scholarship",
+    "desc1": "We help you achieve TOPIK level 6 in 5 months",
+    "desc2": "Get a high TOPIK score and study or work in South Korea",
+    "btnText": "SIGN UP FOR A FREE LESSON",
+    "linkBottom": "Sign up for your first lesson for free!"
+  },
+  "ads": {
+    "title": "TOPIK academy is perfect for you if you:",
+    "ads__card-text1": "Want to speak Korean in a short time",
+    "ads__card-text2": "Want to learn Korean and build your career",
+    "ads__card-text3": "Want to get a TOPIK certificate and win a scholarship to prestigious Korean universities",
+    "ads__card-text4": "Want to study and work in South Korea",
+    "ads__card-text5": "Know Korean at an intermediate level and want to improve",
+    "ads__card-text6": "Have been studying for many years but haven’t achieved results",
+    "ads__btn": "YES, IT'S ME"
+  },
+  "results": {
+    "title": "Our students' results up to TOPIK 6",
+    "button_text": "SUBMIT APPLICATION"
+  },
+  "gks": {
+    "title": "Opportunity to win up to 100% scholarship at Korean universities",
+    "info_text_1": "GKS (Global Korean Scholarship) - $70,000 Scholarship",
+    "info_text_2": "The South Korean government's scholarship program (GKS) through the National Institute for International Education offers foreign students the opportunity to receive up to 100% full scholarship and a monthly stipend for undergraduate and graduate studies in Korea.",
+    "info_text_3": "What the GKS scholarship offers you",
+    "list_item_1": "Travel expenses to and from Korea are covered at the start and end of the program.",
+    "list_item_2": "Upon arrival in Korea, a one-time settlement allowance of 200,000 Korean won (approximately $157) is provided.",
+    "list_item_3": "Language course and university tuition fees are fully covered (only for master's and doctoral students)...",
+    "video_desc": "Learn all about the GKS scholarship in our specially prepared video interview! ..."
+  },
+  "contact": {
+    "title": "Got Questions?",
+    "text": "Leave your information and we will get in touch to answer all your questions.",
+    "inputName": "Your Name",
+    "inputPhone": "Your Phone Number",
+    "submit": "Submit",
+    "loading": "Submitting..."
+  },
+  "courses": {
+    "title": "Register for a course that suits you",
+    "intensive": {
+      "title": "Intensive",
+      "duration": "Duration: 5 months",
+      "text": "Intensive course for those who want to master Korean in-depth, 1.5 hours per day for 6 days a week.",
+      "register": "Register"
+    },
+    "regular": {
+      "title": "Regular",
+      "duration": "Duration: 5 months",
+      "text": "Regular Korean language classes, 1.5 hours 3 times a week.",
+      "register": "Register"
+    },
+    "individual": {
+      "title": "Individual",
+      "duration": "Duration: 5 months",
+      "text": "For those who want to take individual lessons, 1.5 hours 3 times a week. Flexible schedule and personalized approach.",
+      "register": "Register"
+    }
+  },
+  "footer": {
+    "whyTopic": "Why Us",
+    "results": "Results",
+    "courses": "Courses",
+    "questions": "Questions",
+    "commit": "Made by SOLIWEB"
+  },
+  "helps": {
+    "title": "We help successful graduates choose universities and win grants",
+    "infoText": "The TOPIK academy consulting team will assist you in choosing a university, obtaining a visa, and winning a grant.",
+    "moreInfo": "Sign up for a free consultation for more information!",
+    "apply": "Apply"
+  },
+  "modal": {
+    "title": "Leave your information",
+    "text": "Our specialists will contact you to provide more detailed information",
+    "submit": "Sign Up for Free Lesson",
+    "loading": "Submitting",
+    "name": "Your name"
+  },
+  "why": {
+    "title": "Why TOPIK academy?",
+    "card1Title": "Professional Instructors",
+    "card1Text": "You will be taught by instructors with over 4 years of experience and TOPIK level 6",
+    "card2Title": "Free Coworking Zones",
+    "card2Text": "We have free coworking zones for flexible studying, networking, and working on yourself",
+    "card3Title": "Weekly Events",
+    "card3Text": "The TOPIK academy team regularly organizes additional events for students",
+    "card4Title": "Free Mock Exams",
+    "card4Text": "You can participate in mock exams that are held regularly and track your level",
+    "card5Title": "Assisting Curators",
+    "card5Text": "If you face difficulties with your studies, you will have a curator to help you",
+    "card6Title": "Consulting Services",
+    "card6Text": "We help our successful graduates with visa acquisition in South Korea, university selection, and scholarship applications"
+  }
+}

@@ -1,8 +1,38 @@
 .nav {
-  padding: 25px 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  background: #fff;
+  border-bottom: 1px solid #cccc;
 
-  @include media(1050) {
-    padding: 15px 0;
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__lang {
+    font-family: 'Poppins';
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    line-height: 110%;
+
+    @include media(650) {
+      font-size: 15px;
+    }
+
+    img {
+      width: 20px;
+
+      @include media(650) {
+        width: 18px;
+      }
+
+    }
   }
 
   &__logo {
@@ -156,4 +186,15 @@
       }
     }
   }
+}
+
+.lang-enter-active,
+.lang-leave-active {
+  transition: 0.3s;
+}
+
+.lang-enter-from,
+.lang-leave-to {
+  transform: translateY(-50%);
+  opacity: 0;
 }

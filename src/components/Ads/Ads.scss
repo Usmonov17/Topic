@@ -175,25 +175,30 @@
     }
 
     &-text {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       color: #333333;
       text-align: center;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-height: 110%;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
 
       @include media(600) {
-        font-size: 16px;
-      }
-
-      @include media(500) {
         font-size: 15px;
       }
 
-      @include media(450) {
+      @include media(500) {
         font-size: 14px;
       }
 
-      @include media(400) {
+      @include media(450) {
         font-size: 13px;
+      }
+
+      @include media(400) {
+        font-size: 12px;
       }
 
       span {

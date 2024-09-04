@@ -1,7 +1,7 @@
 <template>
   <div class="results" id="results">
     <div class="container">
-      <h2 class="title">O’quvchilarimizning natijalari TOPIK 6 gacha</h2>
+      <h2 class="title">{{ $t("results.title") }}</h2>
       <div class="results__box">
         <Marquee class="marque-box" speed="50">
           <img src="../../assets/images/cefr.png" alt="" />
@@ -21,21 +21,23 @@
         </Marquee>
       </div>
       <div class="btn" @click="openModal">
-        <Btn :text="'ARIZA QOLDIRISH'" />
+        <Btn :text="$t('results.button_text')" />
       </div>
     </div>
   </div>
 </template>
+
 <script setup>
 import Btn from "../UI/Btn.vue";
 import { Marquee } from "vue-fast-marquee";
 import { inject } from "vue";
-const newModal = inject('newModal')
+const newModal = inject("newModal");
 
 const openModal = () => {
-  newModal(true)
-}
+  newModal(true);
+};
 </script>
+
 <style lang="scss">
 @import "../../assets/sass/media.scss";
 

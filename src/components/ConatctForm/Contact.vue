@@ -3,23 +3,23 @@
     <div class="contact">
       <div class="contact__box">
         <div class="contact__info">
-          <h3 class="contact__title">Savollaringiz qoldimi?</h3>
+          <h3 class="contact__title">{{ $t('contact.title') }}</h3>
           <p class="contact__text">
-            Ma’lumotlaringizni qoldiring siz bilan bog’lanib barcha savollaringizga javob
-            beramiz.
+            {{ $t('contact.text') }}
           </p>
         </div>
         <form class="contact__form" @submit.prevent="submitForm">
-          <input class="contact__input" type="text" v-model="formData.name" placeholder="Ismingiz" required />
-          <input class="contact__input" type="tel" v-model="formData.phone" placeholder="Telefon raqamingiz" required />
+          <input class="contact__input" type="text" v-model="formData.name" :placeholder="$t('contact.inputName')" required />
+          <input class="contact__input" type="tel" v-model="formData.phone" :placeholder="$t('contact.inputPhone')" required />
           <button class="contact__btn" :disabled="loading">
-            <Btn class="btn" :text="loading ? 'Yuborilmoqda...' : 'Savol berish'" type="submit" />
+            <Btn class="btn" :text="$t(loading ? 'contact.loading' : 'contact.submit')" type="submit" />
           </button>
         </form>
       </div>
     </div>
   </div>
 </template>
+
 
 <script setup>
 import { ref } from 'vue';
@@ -46,7 +46,7 @@ const submitForm = async () => {
       chat_id: chat_id,
       text: `Name: ${formData.value.name}\nPhone: ${formData.value.phone}`
     });
-    toast("Yuborildi", {
+    toast("Great", {
       "theme": "auto",
       "type": "success",
       "position": "bottom-right",
@@ -58,8 +58,8 @@ const submitForm = async () => {
     formData.value.phone = '';
     loading.value = false;
   } catch (error) {
-    console.error('Xatolik:', error);
-    toast("Yuborishda XATO!", {
+    console.error('Error:', error);
+    toast("Error!", {
       "theme": "auto",
       "type": "error",
       "position": "top-left",

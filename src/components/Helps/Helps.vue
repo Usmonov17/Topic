@@ -1,19 +1,13 @@
 <template>
   <div class="helps">
     <div class="container">
-      <h2 class="title">
-        Muvafaqqiyatli bitiruvchilarimizga universitet tanlash va grant yutishda yordam
-        beramiz
-      </h2>
+      <h2 class="helps__title">{{ $t("helps.title") }}</h2>
       <div class="helps__box">
         <div class="helps__info">
-          <p class="helps__info-text">
-            <span>TOPIK academy consulting</span> jamoasi sizga universitet tanlash, visa
-            olish va grant yutishingizda yaqindan ko’maklashadi
-          </p>
+          <p class="helps__info-text">{{ $t("helps.infoText") }}</p>
           <div class="helps__link">
-            <p>Ko’proq ma’lumot olish uchun bepul konsultatsiyaga yoziling!</p>
-            <Btn :text="'Ariza qoldirish'" @click="openModal" />
+            <p>{{ $t("helps.moreInfo") }}</p>
+            <Btn :text="$t('helps.apply')" @click="openModal" />
           </div>
         </div>
         <div class="helps__res">
@@ -35,9 +29,9 @@
 import { Marquee } from "vue-fast-marquee";
 import Btn from "../UI/Btn.vue";
 import { inject } from "vue";
-const newModal = inject('newModal')
+const newModal = inject("newModal");
 
 const openModal = () => {
-  newModal(true)
-}
+  newModal(true);
+};
 </script>

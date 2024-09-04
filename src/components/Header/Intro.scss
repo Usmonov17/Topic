@@ -7,7 +7,7 @@
   flex-grow: 1;
   position: relative;
   overflow: hidden;
-
+  margin-top: 110px;
   &::after {
     content: "";
     width: 100%;
@@ -26,6 +26,8 @@
   @include media(800) {
     flex-grow: 0;
     height: max-content;
+    margin-top: 70px;
+
   }
 
   &__bg {
