@@ -50,6 +50,8 @@ const formData = ref({
 
 const closeModal = () => {
   emit("update:modal", false);
+  formData.value.name = "";
+  formData.value.phone = "";
 };
 
 const loading = ref(false);
@@ -66,7 +68,7 @@ const submitForm = async () => {
       chat_id: chat_id,
       text: `Ism: ${formData.value.name}\nXabar: ${formData.value.phone}`,
     });
-    toast("Yuborildi", {
+    toast("Succes", {
       theme: "auto",
       type: "success",
       position: "bottom-right",
@@ -75,12 +77,10 @@ const submitForm = async () => {
       dangerouslyHTMLString: true,
     });
     closeModal();
-    formData.value.name = "";
-    formData.value.phone = "";
     loading.value = false;
   } catch (error) {
-    console.error("Xatolik:", error);
-    toast("Yuborishda XATO!", {
+    console.error("Error!", error);
+    toast("Error!", {
       theme: "auto",
       type: "error",
       position: "top-left",
@@ -88,8 +88,6 @@ const submitForm = async () => {
       transition: "slide",
       dangerouslyHTMLString: true,
     });
-    formData.value.name = "";
-    formData.value.phone = "";
     loading.value = false;
   }
 };

@@ -45,7 +45,9 @@
     "inputName": "Ismingiz",
     "inputPhone": "Telefon raqamingiz",
     "submit": "Savol berish",
-    "loading": "Yuborilmoqda..."
+    "loading": "Yuborilmoqda...",
+    "okay": "Yuborildi",
+    "error": "Yuborilmadi"
   },
   "courses": {
     "title": "O’zingizga mos kursga ro’yxatdan o’ting",
@@ -86,7 +88,9 @@
     "text": "Sizga to'liqroq ma'lumot berish uchun mutaxassislarimiz siz bilan bog'lanishadi",
     "submit": "Bepul darsga yozilish",
     "loading": "Yuborilmoqda",
-    "name": "Isminggiz"
+    "name": "Isminggiz",
+    "okay": "Yuborildi",
+    "error": "Yuborilmadi"
   },
   "why": {
     "title": "Nima uchun aynan TOPIK academy?",

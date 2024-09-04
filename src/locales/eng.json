@@ -45,7 +45,9 @@
     "inputName": "Your Name",
     "inputPhone": "Your Phone Number",
     "submit": "Submit",
-    "loading": "Submitting..."
+    "loading": "Submitting...",
+    "okay": "Sent",
+    "error": "Error"
   },
   "courses": {
     "title": "Register for a course that suits you",
@@ -86,7 +88,9 @@
     "text": "Our specialists will contact you to provide more detailed information",
     "submit": "Sign Up for Free Lesson",
     "loading": "Submitting",
-    "name": "Your name"
+    "name": "Your name",
+    "okay": "Sent",
+    "error": "Error"
   },
   "why": {
     "title": "Why TOPIK academy?",
